@@ -22,14 +22,14 @@
                 <div class="leftChunk2">
                     
                   <div class="firstRow">
-                    <input type="button" value="5%">
-                    <input type="button" value="10%">
-                    <input type="button" value="15%">
+                    <input type="button" value="5%" onclick="updateValue(5)">
+                    <input type="button" value="10%" onclick="updateValue(10)">
+                    <input type="button" value="15%" onclick="updateValue(15)">
                   </div>
                   <div class="SecondRow">
-                    <input type="button" value="25%">
-                    <input type="button" value="50%">
-                    <input type="button" value="Custom tip">
+                    <input type="button" value="25%" onclick="updateValue(25)">
+                    <input type="button" value="50%" onclick="updateValue(50)"> 
+                    <input type="button" value="Custom tip" onclick="updateValue(1)">
                   </div>
 
                 </div>
@@ -48,18 +48,28 @@
 
             <div class="subcontainerR">
                 <div class="tipInfo">
-                   <ul class="topay">
-
+                  <div class="topay">
+                   <ul>
                     <li>Tip Per Person</li>
-                    <hr>
-                    <li>Total tip to pay</li>
-                    <hr>
-                    <li>Final Payment</li>
-                    <hr>
+                    <li>Total tip to pay</li> 
+                    <li>Final Payment</li>   
                    </ul>
 
+                   <ul>
+
+                    <li><span id="tipPerPerson">00.00</span></li>
+                    
+                    <li><span id="tipToPay">00.00</span></li>
+                    
+                    <li><span id="finalPayment">00.00</span></li>
+                    
+                   </ul>
+
+                   
+                  </div>
+
                    <div class="checkout">
-                     <input type="button" id="checkout" value="CHECKOUT">
+                     <input type="button" id="checkout" value="CHECKOUT" onclick="test()">
                    </div>
 
 
@@ -75,3 +85,4 @@
  <script src="main.js"></script>
 </body>
 </html>
+
