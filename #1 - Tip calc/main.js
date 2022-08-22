@@ -11,15 +11,15 @@ const textInput = document.querySelectorAll('input[type=text]')
 
 function getPayments(){
 
+    console.log(people)
+
         let tipPerPerson = bill * (tip / 100)
         let tipToPay = tipPerPerson * people
         let finalPayment = bill + tipToPay
 
-        console.log(tipToPay)
-
-        document.getElementById("tipPerPerson").innerHTML = tipPerPerson
-        document.getElementById("tipToPay").innerHTML = tipToPay
-        document.getElementById("finalPayment").innerHTML = finalPayment 
+        document.getElementById("tipPerPerson").innerHTML = tipPerPerson.toFixed(2)
+        document.getElementById("tipToPay").innerHTML = tipToPay.toFixed(2)
+        document.getElementById("finalPayment").innerHTML = finalPayment.toFixed(2) 
 }
 
 buttonInput.forEach((input) => {
@@ -32,8 +32,7 @@ buttonInput.forEach((input) => {
             } else {
                 e.currentTarget.classList.add('pressed')
             }
-        }
-        
+        }   
         getPayments()
     })
 })
@@ -42,24 +41,27 @@ textInput.forEach((textInput) => {
     textInput.addEventListener("input", (e) => {
 
         if(e.currentTarget == billInput){
-            if(!isNaN(billInput.value)){
+            if(billInput.value != ''){
                 bill = parseInt(billInput.value)
-            } else {
+            } else{
                 bill = 0
-            }}
+            } }
         
         if(e.currentTarget == peopleInput){
-            if(!isNaN(peopleInput.value)){
-                people = parseInt(peopleInput.value)
+            if(peopleInput.value != ''){
+                people = parseInt(peopleInput.value)   
             } else {
                 people = 0
-            }}
-
+            }
+        }
+    
         getPayments()
-  })
+    }
+  )
 })
 
 let updateValue = (number) => {
    tip = number 
 }
+
 
