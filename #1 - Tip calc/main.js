@@ -17,6 +17,11 @@ function getPayments(){
         let tipToPay = tipPerPerson * people
         let finalPayment = bill + tipToPay
 
+        if(isNaN(bill)) bill = 0
+        if(isNaN(tipPerPerson)) tipPerPerson = 0
+        if(isNaN(tipToPay)) tipToPay = 0
+        if(isNaN(finalPayment)) finalPayment = 0
+
         document.getElementById("tipPerPerson").innerHTML = tipPerPerson.toFixed(2)
         document.getElementById("tipToPay").innerHTML = tipToPay.toFixed(2)
         document.getElementById("finalPayment").innerHTML = finalPayment.toFixed(2) 
@@ -63,5 +68,8 @@ textInput.forEach((textInput) => {
 let updateValue = (number) => {
    tip = number 
 }
+
+
+
 
 
