@@ -29,7 +29,7 @@
                   <div class="SecondRow">
                     <input type="button" value="25%" onclick="updateValue(25)">
                     <input type="button" value="50%" onclick="updateValue(50)"> 
-                    <input type="button" value="Custom tip" onclick="updateValue(1)">
+                    <input type="number" placeholder="Custom" >
                   </div>
 
                 </div>
@@ -49,19 +49,24 @@
             <div class="subcontainerR">
                 <div class="tipInfo">
                   <div class="topay">
-                   <ul>
-                    <li>Tip Per Person</li>
-                    <li>Total tip to pay</li> 
-                    <li>Final Payment</li>   
+                   <ul class="leftPay">
+
+                    <li class="index">Tip To Pay</li>
+                    <li class ="subindex">Per person</li>
+                    <li class="index">Total tip to pay</li> 
+                    <li class ="subindex">All Persons</li>
+                    <li class="index">Final Payment</li>   
+                    <li class ="subindex">Bill + tip</li>
+
                    </ul>
 
-                   <ul>
+                   <ul class="rightPay">
 
-                    <li><span id="tipPerPerson">00.00</span></li>
+                    <li><span id="tipPerPerson">0.00</span></li>
                     
-                    <li><span id="tipToPay">00.00</span></li>
+                    <li><span id="tipToPay">0.00</span></li>
                     
-                    <li><span id="finalPayment">00.00</span></li>
+                    <li><span id="finalPayment">0.00</span></li>
                     
                    </ul>
 
@@ -69,7 +74,7 @@
                   </div>
 
                    <div class="checkout">
-                     <input type="button" id="checkout" value="CHECKOUT" onclick="test()">
+                     <input type="button" id="checkout" value="CHECKOUT" onclick="location.reload()">
                    </div>
 
 
